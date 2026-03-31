@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect fill="#E24B4A" x="0" y="0" width="32" height="32" rx="6"/>
+  <!-- monitor body -->
+  <rect fill="#d8d8d8" x="3" y="3" width="26" height="17" rx="3"/>
+  <!-- screen -->
+  <rect fill="#ddeedd" x="5" y="5" width="22" height="13" rx="2"/>
+  <!-- face -->
+  <circle cx="16" cy="11" r="5" fill="#F9CB42"/>
+  <!-- X eyes -->
+  <line x1="13" y1="9" x2="15" y2="11" stroke="#3a2a00" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="15" y1="9" x2="13" y2="11" stroke="#3a2a00" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="17" y1="9" x2="19" y2="11" stroke="#3a2a00" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="19" y1="9" x2="17" y2="11" stroke="#3a2a00" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- stand -->
+  <rect fill="#c0c0c0" x="14" y="20" width="4" height="3" rx="1"/>
+  <rect fill="#b8b8b8" x="10" y="22" width="12" height="3" rx="1.5"/>
+  <!-- cz text -->
+  <text x="16" y="31" text-anchor="middle" font-family="Georgia, serif" font-size="6" font-weight="700" fill="#fff">cz</text>
+</svg>

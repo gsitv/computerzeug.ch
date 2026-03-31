@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computerhilfe Solothurn – Hilfe mit Handy, Tablet &amp; Computer | computerzeug.ch</title>
+<meta name="description" content="Gabriel Stöckli bietet Computerhilfe für ältere Menschen im Raum Solothurn. Hausbesuche, geduldig erklärt, kein Fachchinesisch. Jetzt anrufen.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+  :root {
+    --red: #0E7199;
+    --red-light: #e6f3f8;
+    --dark: #1a1a1a;
+    --mid: #555;
+    --light: #f7f5f2;
+    --border: #e8e4de;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--dark);
+    background: var(--light);
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--white);
+    border-bottom: 2px solid var(--red);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-logo small { color: #999; font-weight: 400; }
+  nav ul {
+    margin-left: auto;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--mid);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: color .2s;
+    white-space: nowrap;
+  }
+  nav a:hover, nav a.active { color: var(--red); }
+
+  /* ── PAGE SYSTEM ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--white);
+    padding: 80px 40px 70px;
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--dark);
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--red);
+  }
+  .hero p {
+    font-size: 22px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s;
+    border: none;
+  }
+  .btn:hover { background: #0b5c7a; }
+  .btn-ghost {
+    background: transparent;
+    border: 2px solid var(--border);
+    color: var(--mid);
+    margin-left: 12px;
+  }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); background: transparent; }
+
+  .hero-icon svg { width: 160px; height: 160px; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--red);
+    color: var(--white);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .trust-item::before {
+    content: '✓';
+    font-size: 19px;
+  }
+
+  /* ── SECTION ── */
+  section {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+  .section-label {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+  .lead {
+    font-size: 21px;
+    color: var(--mid);
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 640px;
+  }
+
+  /* ── CARDS ── */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px 24px;
+    border-top: 3px solid var(--red);
+  }
+  .card-title {
+    font-family: 'Lora', serif;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+  }
+  .card p {
+    font-size: 18px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* ── QUOTE / HIGHLIGHT ── */
+  .highlight-box {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    border-radius: 0 8px 8px 0;
+    padding: 28px 32px;
+    margin: 40px 0;
+    font-family: 'Lora', serif;
+    font-size: 23px;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.5;
+  }
+
+  /* ── DIVIDER ── */
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+    align-items: start;
+    margin-top: 16px;
+  }
+  .about-photo {
+    width: 180px;
+    height: 220px;
+    background: var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbb;
+    font-size: 13px;
+    text-align: center;
+    flex-shrink: 0;
+    border: 2px dashed var(--border);
+  }
+  .about-body p {
+    color: var(--mid);
+    margin-bottom: 18px;
+  }
+  .about-body p:first-child { color: var(--dark); font-size: 21px; font-weight: 300; }
+
+  /* ── SERVICES LIST ── */
+  .service-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px 28px;
+    margin-bottom: 20px;
+  }
+  .service-block h3 {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .service-block .meta {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--red);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .service-block p { color: var(--mid); margin-bottom: 14px; }
+  .service-block ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .service-block ul li {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 16px;
+    color: var(--mid);
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px 28px;
+  }
+  .contact-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .contact-card p { color: var(--mid); font-size: 18px; margin-bottom: 10px; }
+  .big-phone {
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--red);
+    margin: 16px 0 4px;
+    letter-spacing: 0.02em;
+  }
+  .contact-note {
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  /* ── HAMBURGER ── */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--dark);
+    border-radius: 2px;
+    transition: transform .25s, opacity .25s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── TABLET (≤ 768 px) ── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    nav ul { gap: 20px; }
+    .hero { padding: 48px 20px 40px; gap: 32px; }
+    section { padding: 48px 20px; }
+    .trust-bar { padding: 14px 20px; gap: 16px; }
+    .hero h1 { font-size: 42px; }
+    .highlight-box { font-size: 20px; padding: 20px 24px; }
+  }
+
+  /* ── MOBILE (≤ 720 px) ── */
+  @media (max-width: 720px) {
+    nav { padding: 12px 16px; flex-wrap: wrap; }
+    .nav-toggle { display: flex; }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      gap: 0;
+      margin-left: 0;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      padding-bottom: 4px;
+    }
+    nav ul.open { display: flex; }
+    nav ul li { width: 100%; }
+    nav a { display: block; padding: 10px 4px; font-size: 16px; }
+
+    .hero { grid-template-columns: 1fr; padding: 36px 16px 32px; }
+    .hero-icon { display: none; }
+    .hero h1 { font-size: 34px; }
+    .hero p { font-size: 19px; }
+    .btn { padding: 15px 26px; font-size: 18px; }
+    .btn-ghost { margin-left: 8px; }
+
+    .trust-bar { padding: 12px 16px; gap: 10px; }
+    .trust-item { font-size: 15px; }
+
+    section { padding: 36px 16px; }
+    h2 { font-size: 30px; }
+    .lead { font-size: 18px; }
+    .highlight-box { font-size: 19px; padding: 18px 20px; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo { width: 100%; height: 180px; }
+
+    .big-phone { font-size: 22px; }
+    .service-block { padding: 24px 18px; }
+    .contact-card { padding: 24px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><span>computer</span>zeug<small>.ch</small></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="nav-menu">
+    <li><a onclick="show('home')" class="active" id="nav-home">Startseite</a></li>
+    <li><a onclick="show('about')" id="nav-about">Über mich</a></li>
+    <li><a onclick="show('services')" id="nav-services">Dienstleistungen</a></li>
+    <li><a onclick="show('contact')" id="nav-contact">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     STARTSEITE
+══════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <div style="background: var(--white);">
+    <div class="hero">
+      <div>
+        <div class="hero-eyebrow">Computerhilfe im Raum Solothurn</div>
+      
+        <h1>Probleme mit dem <em>Computerzeug?</em></h1>
+        <p>Ich komme zu Ihnen nach Hause – und erkläre alles geduldig, verständlich und ohne Fachchinesisch.</p>
+        
+        <button class="btn" onclick="show('contact')">Jetzt anrufen</button>
+        <button class="btn btn-ghost" onclick="show('services')">Alle Leistungen</button>
+      </div>
+       
+       
+        
+    </div>
+    
+  </div>
+
+  <div class="trust-bar">
+    <span class="trust-item">Hausbesuche im Raum Solothurn</span>
+    <span class="trust-item">Geduldig &amp; verständlich</span>
+    <span class="trust-item">Keine versteckten Kosten</span>
+    
+  </div>
+
+  <section>
+    <div class="section-label">Was ich für Sie tue</div>
+    <h2>Damit das Computerzeug endlich funktioniert</h2>
+    <p class="lead">Ob Handy, Tablet oder Computer – ich helfe Ihnen bei allem, was mit Technik zu tun hat. Ruhig, Schritt für Schritt, in Ihrem eigenen Tempo.</p>
+    
+    <div class="cards">
+     
+      <div class="card">
+        <div class="card-title">Handy &amp; Tablet</div>
+        <p>WhatsApp einrichten, Fotos sichern, Apps installieren – ich zeige Ihnen alles, was Sie wissen möchten.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Computer &amp; Drucker</div>
+        <p>PC oder Laptop einrichten, Drucker anschliessen, E-Mail-Konto einrichten – ich kümmere mich darum.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Sicherheit &amp; Schutz</div>
+        <p>Ich erkläre Ihnen, wie Sie Betrüger im Internet erkennen und schütze Ihren Computer vor Viren.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Kurse &amp; Erklärungen</div>
+        <p>Lieber selbst lernen? Ich erkläre Ihnen gerne alles, bis Sie sich sicher fühlen – ganz ohne Zeitdruck.</p>
+      </div>
+      <div style="width: 500px; text-align: center;">
+        <img src="images/computerzeug_error.svg" alt="Computer mit Fehlermeldung" style="width: 100%; height: auto;"> 
+      </div>
+    </div>
+    
+  </section>
+
+  <hr>
+
+  <section>
+    <div class="highlight-box">
+      «Endlich jemand, der mir das erklärt – ohne dass ich mich schämen muss, weil ich es nicht weiss.»
+    </div>
+    <p style="color: var(--mid); font-size: 14px;">— So soll es bei Ihnen auch sein.</p>
+  </section>
+
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     ÜBER MICH
+══════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <section>
+    <div class="section-label">Wer steckt dahinter</div>
+    <h2>Hallo, ich bin Gabriel Stöckli</h2>
+
+    <div class="about-grid">
+      <div class="about-photo"><img src="images/gabrielstoeckli.jpg" alt="Gabriel Stöckli" style="width: 100%; height: auto;"></div>
+      <div class="about-body">
+        <p>Ich bin ein Informatiker aus der Region Solothurn – und ich weiss, wie frustrierend es sein kann, wenn das Computerzeug einfach nicht so funktioniert, wie es soll.</p>
+        <p>Genau deshalb habe ich computerzeug.ch gegründet: um Menschen zu helfen, die sich von der Technik überfordert fühlen – ohne Zeitdruck, ohne Fachchinesisch und ohne das Gefühl, eine dumme Frage gestellt zu haben.</p>
+        <p>Ich komme zu Ihnen nach Hause, schaue mir das Problem gemeinsam mit Ihnen an und erkläre alles so, dass Sie es verstehen und sich danach sicherer fühlen. Ob Handy, Tablet, Computer oder Drucker – ich helfe gerne.</p>
+        <p>Und falls Sie lieber selbst lernen möchten: Ich biete auch einfache Kurse und Erklärungen an, damit Sie das nächste Mal selbst weiterwissen.</p>
+
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════
+     DIENSTLEISTUNGEN
+══════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <section>
+    <div class="section-label">Was ich anbiete</div>
+    <h2>Hilfe mit allem, was Strom braucht</h2>
+    <p class="lead">Ich komme zu Ihnen nach Hause – in Solothurn und Umgebung. Jedes Problem ist wichtig – und jede Frage ist berechtigt.</p>
+
+    <div class="service-block">
+      <div class="meta">Handy &amp; Smartphone</div>
+      <h3>Handy macht Quatsch?</h3>
+      <p>Ich richte Ihr Smartphone ein, installiere Apps und zeige Ihnen, wie Sie WhatsApp, Fotos und Videoanrufe nutzen – damit Sie immer in Verbindung mit Ihren Liebsten bleiben.</p>
+      <ul>
+        <li>WhatsApp einrichten</li>
+        <li>Fotos sichern &amp; teilen</li>
+        <li>Videoanrufe (FaceTime, Teams)</li>
+        <li>Apps installieren</li>
+        <li>Handy auf neues Gerät umziehen</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="meta">Tablet</div>
+      <h3>Tablet-Probleme lösen</h3>
+      <p>iPad oder Android-Tablet – ich helfe Ihnen bei Einrichtung, Updates und allem, was Sie damit machen möchten. Gemeinsam und in Ihrem Tempo.</p>
+      <ul>
+        <li>Tablet einrichten</li>
+        <li>E-Mails lesen &amp; schreiben</li>
+        <li>Internet sicher nutzen</li>
+        <li>Updates durchführen</li>
+        <li>Spiele &amp; Unterhaltungs-Apps</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="meta">Computer &amp; Laptop</div>
+      <h3>PC oder Laptop wieder fit machen</h3>
+      <p>Ihr Computer ist langsam, startet nicht oder verhält sich seltsam? Ich schaue mir das Problem an und erkläre Ihnen, was los ist – und wie wir es beheben.</p>
+      <ul>
+        <li>Computer einrichten</li>
+        <li>Drucker anschliessen</li>
+        <li>E-Mail-Konto einrichten</li>
+        <li>WLAN-Probleme lösen</li>
+        <li>Datensicherung</li>
+        <li>Schutz vor Viren</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="meta">Sicherheit</div>
+      <h3>Schutz vor Betrügern im Internet</h3>
+      <p>Betrüger werden immer raffinierter. Ich zeige Ihnen, wie Sie verdächtige E-Mails und Anrufe erkennen und sich schützen – damit Ihnen nichts passiert.</p>
+      <ul>
+        <li>Phishing erkennen</li>
+        <li>Sichere Passwörter</li>
+        <li>Virenscanner einrichten</li>
+        <li>Betrugsmaschen erklären</li>
+      </ul>
+    </div>
+
+    <div class="service-block">
+      <div class="meta">Kurse &amp; Erklärungen</div>
+      <h3>Lieber selbst lernen?</h3>
+      <p>Ich biete einfache Einzelkurse bei Ihnen zuhause an – ganz ohne Zeitdruck. Wir üben so lange, bis Sie sich sicher fühlen. Kein Stoff, den Sie auswendig lernen müssen – nur das, was Sie wirklich brauchen.</p>
+      <ul>
+        <li>Internet für Einsteiger</li>
+        <li>Sicher online einkaufen</li>
+        <li>E-Banking verstehen</li>
+        <li>Videotelefonie üben</li>
+      </ul>
+    </div>
+
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════
+     KONTAKT
+══════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <section>
+    <div class="section-label">Einfach melden</div>
+    <h2>Kein Problem ist zu klein</h2>
+    <p class="lead">Rufen Sie einfach an – ich freue mich auf Ihre Nachricht.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Telefon</h3>
+        <p>Am liebsten rufen Sie mich einfach an. Ich melde mich so schnell wie möglich zurück.</p>
+        <div class="big-phone">077 438 64 73</div>
+        
+        <p style="margin-top: 16px; font-size: 14px;">Montag – Freitag, 8–17 Uhr<br>Samstag nach Vereinbarung</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>E-Mail</h3>
+        <p>Sie können mir auch eine E-Mail schreiben – ich antworte innerhalb eines Werktages.</p>
+        <p style="margin-top: 16px; font-weight: 600; color: var(--dark);">info@computerzeug.ch</p>
+        
+        <p style="margin-top: 20px; font-size: 14px; color: var(--mid);">Ich bin im Raum Solothurn unterwegs – also in Solothurn, Olten, Grenchen und Umgebung.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 48px;">
+      Unsicher, ob Ihr Problem «gross genug» ist? Rufen Sie trotzdem an. Kein Anliegen ist zu klein – und keine Frage ist falsch.
+    </div>
+
+  </section>
+</div>
+
+<script>
+const pageMeta = {
+  home:     { title: 'Computerhilfe Solothurn – Hilfe mit Handy, Tablet & Computer | computerzeug.ch', desc: 'Gabriel Stöckli bietet Computerhilfe für ältere Menschen im Raum Solothurn. Hausbesuche, geduldig erklärt, kein Fachchinesisch. Jetzt anrufen.' },
+  about:    { title: 'Über mich – Gabriel Stöckli, Computerhilfe Solothurn | computerzeug.ch', desc: 'Gabriel Stöckli hilft älteren Menschen im Raum Solothurn bei Handy, Tablet und Computer. Persönlich, geduldig, bei Ihnen zuhause.' },
+  services: { title: 'Dienstleistungen – Computerhilfe für Senioren Solothurn | computerzeug.ch', desc: 'Hilfe mit Handy, Tablet, Computer und Drucker – bei Ihnen zuhause in Solothurn. Gabriel Stöckli erklärt geduldig und ohne Fachbegriffe.' },
+  contact:  { title: 'Kontakt – Computerhilfe Solothurn, Gabriel Stöckli | computerzeug.ch', desc: 'Einfach anrufen oder mailen – Gabriel Stöckli hilft Ihnen mit Handy, Tablet und Computer. Hausbesuche im Raum Solothurn.' }
+};
+
+function show(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.getElementById('nav-' + page).classList.add('active');
+  if (pageMeta[page]) {
+    document.title = pageMeta[page].title;
+    document.querySelector('meta[name="description"]').setAttribute('content', pageMeta[page].desc);
+  }
+  window.scrollTo(0, 0);
+  closeNav();
+}
+
+function toggleNav() {
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  toggle.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+
+function closeNav() {
+  document.getElementById('nav-toggle').classList.remove('open');
+  document.getElementById('nav-menu').classList.remove('open');
+}
+</script>
+</body>
+</html>
