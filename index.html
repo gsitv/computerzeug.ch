@@ -243,18 +243,22 @@
     margin-top: 16px;
   }
   .about-photo {
-    width: 180px;
-    height: 220px;
-    background: var(--border);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #bbb;
-    font-size: 13px;
-    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
     flex-shrink: 0;
-    border: 2px dashed var(--border);
+    border: 4px solid var(--red);
+    box-shadow: 0 4px 20px rgba(14, 113, 153, 0.18);
+    background: var(--light);
+  }
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transform: scale(0.82);
+    transform-origin: top center;
   }
   .about-body p {
     color: var(--mid);
@@ -405,9 +409,8 @@
     .highlight-box { font-size: 19px; padding: 18px 20px; }
 
     .contact-grid { grid-template-columns: 1fr; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-photo { width: 100%; height: 220px; overflow: hidden; }
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .about-grid { grid-template-columns: 1fr; justify-items: center; }
+    .about-photo { width: 180px; height: 180px; }
 
     .big-phone { font-size: 22px; }
     .service-block { padding: 24px 18px; }
@@ -511,7 +514,7 @@
     <h2>Hallo, ich bin Gabriel Stöckli</h2>
 
     <div class="about-grid">
-      <div class="about-photo"><img src="images/gabrielstoeckli.jpg" alt="Gabriel Stöckli" style="width: 100%; height: auto;"></div>
+      <div class="about-photo"><img src="images/gabrielstoeckli3.png" alt="Gabriel Stöckli" style="width: 100%; height: auto;"></div>
       <div class="about-body">
         <p>Ich bin Softwareentwickler aus Solothurn – und ich weiss, wie frustrierend es sein kann, wenn das Computerzeug einfach nicht so funktioniert, wie es soll.</p>
         <p>Seit über 20 Jahren führe ich meine eigene Firma, die IT-Venture GmbH, hier in Solothurn. Dort entwickle ich grosse Softwarelösungen für Unternehmen – zum Beispiel komplexe Systeme für Banken, mit denen diese ihre Dienstleistungen verwalten. Daneben habe ich einige Jahre an einer Fachmittelschule Informatik unterrichtet. Ich weiss also sehr genau, wie Technik funktioniert – und genau deshalb weiss ich auch, wie man sie verständlich erklärt.</p>
