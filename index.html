@@ -7,7 +7,34 @@
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <meta name="description" content="Gabriel Stöckli bietet Computerhilfe für ältere Menschen im Raum Solothurn. Hausbesuche, geduldig erklärt, kein Fachchinesisch. Jetzt anrufen.">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+  @font-face {
+    font-family: 'Lora';
+    src: url('fonts/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Lora';
+    src: url('fonts/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('fonts/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
 
   :root {
     --red: #0E7199;
@@ -649,12 +676,50 @@
   </section>
 </div>
 
+<!-- ══════════════════════════════════════════
+     DATENSCHUTZ
+══════════════════════════════════════════ -->
+<div class="page" id="page-datenschutz">
+  <section>
+    <div class="section-label">Rechtliches</div>
+    <h2>Datenschutzerklärung</h2>
+
+    <p class="lead">Der Schutz Ihrer persönlichen Daten ist mir wichtig.</p>
+
+    <h3 style="font-family:'Lora',serif;font-size:22px;margin:32px 0 10px;">Verantwortliche Stelle</h3>
+    <p style="color:var(--mid);">Gabriel Stöckli<br>computerzeug.ch<br>Solothurn<br>gabriel@computerzeug.ch</p>
+
+    <h3 style="font-family:'Lora',serif;font-size:22px;margin:32px 0 10px;">Welche Daten werden bearbeitet?</h3>
+    <p style="color:var(--mid);">Wenn Sie mich per E-Mail oder Telefon kontaktieren, verwende ich Ihre Angaben (Name, E-Mail-Adresse, Telefonnummer, Nachrichteninhalt) ausschliesslich zur Bearbeitung Ihrer Anfrage. Nach Abschluss werden die Daten gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+
+    <h3 style="font-family:'Lora',serif;font-size:22px;margin:32px 0 10px;">Weitergabe an Dritte</h3>
+    <p style="color:var(--mid);">Ich gebe Ihre Daten nicht an Dritte weiter.</p>
+
+    <h3 style="font-family:'Lora',serif;font-size:22px;margin:32px 0 10px;">Cookies &amp; Tracking</h3>
+    <p style="color:var(--mid);">Diese Website verwendet keine Cookies und kein Tracking. Alle Schriften werden lokal geladen – es werden keine Daten an externe Server übermittelt.</p>
+
+    <h3 style="font-family:'Lora',serif;font-size:22px;margin:32px 0 10px;">Ihre Rechte</h3>
+    <p style="color:var(--mid);">Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer gespeicherten Daten. Wenden Sie sich dazu einfach per E-Mail an gabriel@computerzeug.ch.</p>
+
+    <p style="color:#aaa;font-size:15px;margin-top:48px;">Gültig ab April 2026 · Anwendbares Recht: Schweiz (nDSG)</p>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer style="text-align:center;padding:24px 20px;border-top:1px solid var(--border);font-size:15px;color:#aaa;">
+  © 2026 Gabriel Stöckli – computerzeug.ch &nbsp;|&nbsp;
+  <a onclick="show('datenschutz')" style="color:#aaa;text-decoration:underline;cursor:pointer;">Datenschutz</a>
+</footer>
+
 <script>
 const pageMeta = {
   home:     { title: 'Computerhilfe Solothurn – Hilfe mit Handy, Tablet & Computer | computerzeug.ch', desc: 'Gabriel Stöckli bietet Computerhilfe für ältere Menschen im Raum Solothurn. Hausbesuche, geduldig erklärt, kein Fachchinesisch. Jetzt anrufen.' },
   about:    { title: 'Über mich – Gabriel Stöckli, Computerhilfe Solothurn | computerzeug.ch', desc: 'Gabriel Stöckli hilft älteren Menschen im Raum Solothurn bei Handy, Tablet und Computer. Persönlich, geduldig, bei Ihnen zuhause.' },
   services: { title: 'Dienstleistungen – Computerhilfe für Senioren Solothurn | computerzeug.ch', desc: 'Hilfe mit Handy, Tablet, Computer und Drucker – bei Ihnen zuhause in Solothurn. Gabriel Stöckli erklärt geduldig und ohne Fachbegriffe.' },
-  contact:  { title: 'Kontakt – Computerhilfe Solothurn, Gabriel Stöckli | computerzeug.ch', desc: 'Einfach anrufen oder mailen – Gabriel Stöckli hilft Ihnen mit Handy, Tablet und Computer. Hausbesuche im Raum Solothurn.' }
+  contact:      { title: 'Kontakt – Computerhilfe Solothurn, Gabriel Stöckli | computerzeug.ch', desc: 'Einfach anrufen oder mailen – Gabriel Stöckli hilft Ihnen mit Handy, Tablet und Computer. Hausbesuche im Raum Solothurn.' },
+  datenschutz:  { title: 'Datenschutz – computerzeug.ch', desc: 'Datenschutzerklärung von computerzeug.ch gemäss Schweizer Datenschutzgesetz (nDSG).' }
 };
 
 function show(page) {
