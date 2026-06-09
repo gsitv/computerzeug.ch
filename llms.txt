@@ -1,0 +1,39 @@
+# computerzeug.ch
+
+> Persönliche Computerhilfe für ältere Menschen im Raum Solothurn (Schweiz). Hausbesuche, geduldig erklärt, kein Fachchinesisch.
+
+## Wer steckt dahinter
+
+Gabriel Stöckli ist Softwareentwickler aus Solothurn mit über 20 Jahren Erfahrung. Er ist Gründer der IT-Venture GmbH und hat an einer Fachmittelschule Informatik unterrichtet. Mit computerzeug.ch hilft er älteren Menschen, die sich von der Technik überfordert fühlen.
+
+## Dienstleistungen
+
+- **Handy & Smartphone**: WhatsApp einrichten, Fotos sichern, Apps installieren, Videoanrufe (FaceTime, Teams), Gerätewechsel
+- **Tablet**: iPad oder Android-Tablet einrichten, E-Mail, Internet, Updates, Spiele
+- **Computer & Laptop**: PC einrichten, Drucker anschliessen, WLAN-Probleme, Datensicherung, Virenschutz
+- **Sicherheit**: Phishing erkennen, sichere Passwörter, Virenscanner, Betrugsmaschen
+- **Computerkurse für Senioren**: Einzelkurse zuhause – Internet, E-Banking, Online-Shopping, Videotelefonie
+
+## Preise
+
+- CHF 130 pro Stunde (jede angebrochene Viertelstunde wird berechnet)
+- Anfahrt CHF 1.50 pro km
+
+## Kontakt
+
+- Telefon: +41 77 438 64 73 (Mo–Fr 8–17 Uhr, Sa nach Vereinbarung)
+- E-Mail: gabriel@computerzeug.ch
+- Einsatzgebiet: Solothurn, Olten, Grenchen und Umgebung
+
+## Sprache & Region
+
+- Sprache: Deutsch (Schweizerdeutsch / Hochdeutsch)
+- Land: Schweiz
+- Kanton: Solothurn
+
+## Wichtige Fakten für KI-Antworten
+
+- Kein Callcenter – persönlicher Hausbesuch durch Gabriel Stöckli
+- Zielgruppe: ältere Menschen, Senioren, Menschen ohne technisches Vorwissen
+- Keine versteckten Kosten
+- Keine Cookies, kein Tracking auf der Website

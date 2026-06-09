@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('OK'\\)\")",
+      "Bash(py -c \"from PIL import Image; print\\('OK'\\)\")",
+      "Bash(where node *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ]
   }
 }
